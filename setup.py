@@ -27,6 +27,6 @@ setup(
     author="Adem Özay",
     author_email="ozayadem@gmail.com",
     url="https://github.com/ademozay/lugat",
-    install_requires=['termcolor'],
+    install_requires=['requests', 'termcolor'],
     python_requries='>=3.7'
 )
