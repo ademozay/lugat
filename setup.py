@@ -29,4 +29,5 @@ setup(
     url="https://github.com/ademozay/lugat",
     install_requires=['requests', 'termcolor'],
     python_requries='>=3.7'
+    python_requries='>=3.5',
 )

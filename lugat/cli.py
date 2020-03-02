@@ -23,7 +23,7 @@ def main():
             for i, v in enumerate(variations, start=1):
                 text += colored(v.name, 'yellow', attrs=['bold', 'underline'])
                 if len(variations) > 2:
-                    text += ' {}'.format(colored(f'[{i}]', attrs=['dark']))
+                    text += ' {}'.format(colored('[{}]'.format(i), attrs=['dark']))
                 if v.origin:
                     text += ' - ' + colored(v.origin, 'yellow', attrs=['dark'])
 
@@ -39,11 +39,11 @@ def main():
 
                     text += '\n'
                     for s in m.samples:
-                        text += f"""  {colored('Örnek', 'magenta')}  """
-                        text += f"""  {colored(s.text, 'green')}"""
+                        text += '  {}  '.format(colored('Örnek', 'magenta'))
+                        text += '  {}'.format(colored(s.text, 'green'))
                         if s.authors:
                             text += '\n'
-                            text += f"""  {colored('Yazarlar', 'magenta')} """
+                            text += '  {} '.format(colored('Yazarlar', 'magenta'))
                             text += colored(', '.join(s.authors), 'blue')
                         text += '\n'
                     else:
