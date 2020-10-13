@@ -2,10 +2,7 @@ import sys
 
 from termcolor import colored
 
-try:
-    from dict import lookup, LookupException
-except:
-    from .dict import lookup, LookupException
+from lugat.dict import lookup, LookupException
 
 HELP_TEXT = '''
 

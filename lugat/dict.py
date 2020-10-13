@@ -1,13 +1,7 @@
 import requests
 
-
-try:
-    from __version__ import __version__
-    from word import new as new_word
-except:
-    from .__version__ import __version__
-    from .word import new as new_word
-
+from lugat.__version__ import __version__
+from lugat.word import new as new_word
 
 class LookupException(Exception):
     pass
