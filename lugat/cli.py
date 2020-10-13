@@ -16,8 +16,8 @@ HELP_TEXT = '''
 
     Daha detaylı sonuçlar için:
 
-        ''' + colored('lugat', attrs=['bold']) + ''' -v çırak
-        ''' + colored('lugat', attrs=['bold']) + ''' -v usta
+        ''' + colored('lugat', attrs=['bold']) + ''' -h çırak
+        ''' + colored('lugat', attrs=['bold']) + ''' -h usta
 
     * Detaylı sonuçlar; atasözleri, deyimler, birleşik fiiller ve birleşik kelimelerden oluşur.
 '''
