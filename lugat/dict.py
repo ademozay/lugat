@@ -1,5 +1,7 @@
 import requests
 
+from __version__ import __version__
+
 try:
     from word import new as new_word
 except:
@@ -11,14 +13,11 @@ class LookupException(Exception):
 
 
 URL = 'https://sozluk.gov.tr/gts?ara={}'
-USER_AGENT = (
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) '
-    'AppleWebKit/537.36 (KHTML, like Gecko) '
-    'Chrome/80.0.3987.87 Safari/537.36'
-)
+USER_AGENT = ('lugat/' + __version__)
+REFERER = 'github.com/ademozay/lugat'
 HEADERS = {
-    'Host': 'sozluk.gov.tr',
-    'User-Agent': USER_AGENT
+    'User-Agent': USER_AGENT,
+    'Referer': REFERER,
 }
 
 
