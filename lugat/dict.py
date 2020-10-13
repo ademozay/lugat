@@ -1,10 +1,11 @@
 import requests
 
-from __version__ import __version__
 
 try:
+    from __version__ import __version__
     from word import new as new_word
 except:
+    from .__version__ import __version__
     from .word import new as new_word
 
 
