@@ -21,7 +21,13 @@ Nasıl Kullanılır
 
 .. code:: shell
   
-  lugat <kelime>
+  lugat <kelime, atasözü, deyim vb.>
+
+Atasözleri, deyimler, birleşik fiiller ve birleşik kelimeler gibi detayları görmek için
+
+.. code:: shell
+  
+  lugat -h <kelime, atasözü, deyim vb.>
 
 * Python uygulaması içinde
 

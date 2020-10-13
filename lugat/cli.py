@@ -7,11 +7,43 @@ try:
 except:
     from .dict import lookup, LookupException
 
+HELP_TEXT = '''
+
+    ''' + colored("TDK Güncel Türkçe Sözlük'te arama yapın.", attrs=['bold']) + '''
+
+        ''' + colored('lugat', attrs=['bold']) + ''' mütevazı
+        ''' + colored('lugat', attrs=['bold']) + ''' cefakâr
+
+    Daha detaylı sonuçlar için:
+
+        ''' + colored('lugat', attrs=['bold']) + ''' -v çırak
+        ''' + colored('lugat', attrs=['bold']) + ''' -v usta
+
+    * Detaylı sonuçlar; atasözleri, deyimler, birleşik fiiller ve birleşik kelimelerden oluşur.
+'''
+
+VERBOSE_FLAG = '-h'
+FLAGS = [VERBOSE_FLAG]
+
 def main():
-    search = ' '.join(sys.argv[1:])
+    args = sys.argv[1:]
+
+    if len(args) < 1:
+        print(HELP_TEXT)
+        exit(2)
+
+    verbose = False
+    if VERBOSE_FLAG in args:
+        verbose = True
+    
+    remaing_args = list(filter(lambda arg: arg not in FLAGS, args))
+    remaing_args = list(filter(lambda arg: not arg.startswith('-'), args))
+
+    search = ' '.join(remaing_args)
+
     if not search:
-        print("Lütfen en az bir harf yazınız.")
-        sys.exit(0)
+        print(HELP_TEXT)
+        sys.exit(2)
 
     word = lookup(search)
 
@@ -48,6 +80,9 @@ def main():
                         text += '\n'
                     else:
                         text += '\n'
+
+                if not verbose:
+                    continue
 
                 if v.compound_words:
                     text += colored('Birleşik Kelimeler', 'cyan') + '\n'
