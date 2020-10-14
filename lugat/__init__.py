@@ -1,4 +1,1 @@
-try:
-    from dict import lookup, LookupException
-except:
-    from .dict import lookup, LookupException
+from lugat.dict import lookup, LookupException
