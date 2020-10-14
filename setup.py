@@ -31,5 +31,5 @@ setup(
         'requests >= 2.0.0',
         'termcolor >= 1.0.0'
     ],
-    python_requries='>=3.5',
+    zip_safe=True,
 )
