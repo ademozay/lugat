@@ -10,10 +10,22 @@ lügat
         
 Nasıl Yüklenir
 --------------
+
+* pip ile kurabilir
+
 .. code:: shell
   
   pip3 install lugat
-      
+
+* Ya da Docker ile kullanmak isterseniz aşağıdaki fonksiyonu profil dosyanıza(.bash_rc, .zsh_rc vb.) ekleyebilirsiniz.
+
+.. code:: shell
+
+  function lugat() {
+    docker run -it --rm ademozay/lugat $@
+  }
+
+
 Nasıl Kullanılır
 ----------------                
 
