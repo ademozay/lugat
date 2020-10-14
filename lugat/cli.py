@@ -2,6 +2,7 @@ import sys
 
 from termcolor import colored
 
+from lugat.__version__ import __version__
 from lugat.dict import lookup, LookupException
 
 HELP_TEXT = '''
@@ -16,7 +17,10 @@ HELP_TEXT = '''
         ''' + colored('lugat', attrs=['bold']) + ''' -h çırak
         ''' + colored('lugat', attrs=['bold']) + ''' -h usta
 
-    * Detaylı sonuçlar; atasözleri, deyimler, birleşik fiiller ve birleşik kelimelerden oluşur.
+    *Detaylı sonuçlar; atasözleri, deyimler, 
+    birleşik fiiller ve birleşik kelimelerden oluşur.
+
+    lugat ''' +  colored('v' + __version__, attrs=['bold'])  + '''
 '''
 
 VERBOSE_FLAG = '-h'
