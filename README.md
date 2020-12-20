@@ -55,7 +55,7 @@ except LookupException:
 
 `Alfred` ile
 
-[Lugat.alfredworkflow](<https://github.com/ademozay/lugat/releases/download/0.2.0/Lugat.alfredworkflow>)'u indirip kurduktan sonra bir kısayol atamanız gerekecek. 
+[Lugat.alfredworkflow](<https://github.com/ademozay/lugat/releases/download/v0.2.0/Lugat.alfredworkflow>)'u indirip kurduktan sonra bir kısayol atamanız gerekecek. 
 Ben `Option + Shift + L` kombiyasyonunu kullanıyorum. Eğer kısayol atamak istemezseniz, Alfred'e `lügat` yazdıktan sonra yine arama yapabilirsiniz.
 
 `Command + L` kısayolu ile, Alfred ekranına sığmayan tanımları ve kullanım örneklerini `Large Type` ile görüntüleyebilirsiniz.
