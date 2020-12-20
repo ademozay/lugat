@@ -9,7 +9,7 @@ version = re.search(
 ).group(1)
 
 
-with open("README.rst", "rb") as f:
+with open("README.md", "rb") as f:
     long_descr = f.read().decode("utf-8")
 
 
@@ -22,7 +22,7 @@ setup(
     version=version,
     description="TDK Güncel Türkçe Sözlük için komut satırı uygulaması.",
     long_description=long_descr,
-    long_description_content_type="text/x-rst",
+    long_description_content_type="text/markdown",
     keywords="tdk,cli",
     author="Adem Özay",
     author_email="ozayadem@gmail.com",
